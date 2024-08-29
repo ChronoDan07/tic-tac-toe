@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="title">
+            <div>TIC</div><div>TAC</div><div>TOE</div>  
+        </div>
+    </header>
+    <div id="content">
+        <div id="scoreboard">
+            <div id="player">Player's Score:</div>
+            <div id="score1">0</div>
+            <div id="cpu">Computer's Score:</div>
+            <div id="score2">0</div>
+        </div>
+        <div id="round">The computer prepares its moves.</div>
+        <div id="gamebox">
+            <div id="box" data-index="0,0">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+            <div id="box" data-index="0,1">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+            <div id="box" data-index="0,2">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+            <div id="box" data-index="1,0">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+            <div id="box" data-index="1,1">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+            <div id="box" data-index="1,2">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+            <div id="box" data-index="2,0">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+            <div id="box" data-index="2,1">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+            <div id="box" data-index="2,2">
+                <div id="X" class="invisible">X</div>
+                <div id="O" class="invisible">O</div>
+            </div>
+        </div>
+        <div id="buttons">
+            <button id="start" onclick="play()">Play</button>
+            <button onclick="resetScore()">Reset Score</button>
+            <button onclick="changeName()">Change Name</button>
+        </div>
+    </div>
+    <dialog id="dialog" class="invisible">
+        <div id="close-tag">
+            <i class="fa-solid fa-xmark close" id="close-dialog"></i>
+        </div>
+        <form id="form">
+            <label>
+                <div class="text">Name:</div>
+                <input type="text" id="name" placeholder="Player" required>
+            </label>
+            <input type="submit" id="submit" value="Enter">
+        </form>
+    </dialog>
+    <footer></footer>
+    <script src="game.js"></script>    
+</body>
+</html>
