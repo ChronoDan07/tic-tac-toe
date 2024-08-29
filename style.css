@@ -1,0 +1,188 @@
+    html, body{
+        margin: 0;
+        padding: 0;
+    }
+
+    @font-face {
+        font-family: Rowdy;
+        src: url(Rowdies-Regular.ttf);
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10.5vh 79vh 10.5vh;
+    }
+
+    #content{
+        background-color: rgb(234, 234, 234);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header,footer{
+        background-color: white;
+        box-shadow: 5px;
+    }
+
+    header{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        font-family: Rowdy;
+    }
+
+    #title{
+        display: flex;
+        gap: 10px;
+        user-select: none;
+
+    }
+
+    #title div:nth-child(3), #title div:first-child{
+        color: red;
+    }
+    
+
+    #gamebox{
+        border: solid black;
+        display: grid;
+        height: 45vh;
+        width: 45vh;
+        justify-self: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        position: relative;
+    }
+
+    #box{
+        border: 1px solid black;
+        background-color: white;
+    }
+
+
+    #box:hover{
+        background-color: rgba(230, 226, 171, 0.5);
+    }
+
+    #buttons{
+        display: grid;
+        justify-content: center;
+        align-self: start;
+        gap: 1vh;
+        user-select: none;
+        font-family: Rowdy;
+
+    }
+
+    #buttons button:hover{
+        background-color: rgb(164, 162, 162);
+    }
+
+    #buttons button{
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        border: 2px solid black;
+        font-size: 3vh;
+        border-radius: 1vw;
+        color: red;
+    }
+    #buttons button:first-child,#buttons button:nth-child(3){
+        color: black;
+    }
+
+    #buttons button:active {
+        background-color: gray;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+
+    #scoreboard{
+        display: grid;
+        border: 1px solid black;
+        height:auto;
+        width: max-content;
+        gap: 10px;
+        font-size: 3vh;
+        grid-template-areas: 
+        "score score"
+        "score score";
+        justify-content: center;
+        justify-self: center;
+        border-radius: 0.5vw;
+        text-align: center;
+        user-select: none;
+    }
+
+    #round{
+        justify-self: center;
+        font-family: Rowdy;
+        font-size: 2vh;
+        user-select: none;
+    }
+
+    #cpu,#score2{
+        color: black;
+    }
+    #player{
+        color: red;
+    }
+
+    dialog{
+        grid-template-columns: 1fr;
+        gap: 25px;
+        width: 300px;
+        justify-content: center;
+        border-radius: 15px;
+        text-align: center;
+    }
+    
+    form{
+        display: grid;
+        justify-self: center;
+        gap: 15px;
+        grid-template-columns: max-content;
+        justify-content: center;
+    }
+    
+    
+    
+    label{
+        justify-self: center;   
+        display: grid;
+    }
+    
+    
+    dialog #close-tag{
+        position: absolute;
+        left: 94.5%;
+        color: red;
+    }
+
+    
+
+    .invisible{
+        display: none;
+    }
+
+    #X,#O{
+        position: relative;
+        font-size: 12vh;
+        height: max-content;
+        width: max-content;
+        top: 5%;
+        left: 20%;
+        user-select: none;
+        
+        
+    }
+
+
+
+    #X{
+        color: red;
+    }
